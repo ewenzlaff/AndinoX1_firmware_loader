@@ -1,0 +1,5 @@
+BOARD_TAG = pro
+BOARD_SUB = 8MHzatmega328
+ARDUINO_PORT = /dev/ttyAMA0
+ARDUINO_LIBS = EEPROM
+include $(ARDMK_DIR)/Arduino.mk
