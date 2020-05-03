@@ -58,7 +58,7 @@
 // 181216: Fixed debouncing
 
 #include <EEPROM.h>
-#include "TimerOne.h"
+#include <TimerOne.h>
 #include <avr/wdt.h>
 
 #define LED_PIN   13
@@ -112,6 +112,31 @@
 #define CR 13
 
 #define BAUD_RATE 38400
+//---------------------- [ Types  ]------------------
+typedef struct {
+  byte current_val = 0;
+  byte poll_counter = 0;
+  byte skip_counter = 0;
+  unsigned long Counter = 0;
+} CounterControl;
+
+
+//---------------------- [ Prototypes  ]------------------
+
+bool checkRange( unsigned int val, unsigned int mini, unsigned int maxi );
+bool isNumeric(String str);
+int toInt( String s, int pos  );
+void DoCmdInfo(void);
+void DoCmdReset(void);
+void OnDataReceived(void);
+void SetupWrite(void);
+void doCounter( CounterControl * pCounter, byte input );
+void PrintHex16(word data);
+void DoCheckRxData(void);
+void timerInterrupt(void);
+void setup_interrupt(void);
+void SetupRead(void);
+void setup_in_out(void);
 
 // ---------------------- [ Receive Data ]------------------
 #define RX_SIZE  19
@@ -134,12 +159,7 @@ struct Setup
 } TheSetup;
 
 // ---------------------- [ Input & Debounce ] ----------------
-typedef struct {
-  byte current_val = 0;
-  byte poll_counter = 0;
-  byte skip_counter = 0;
-  unsigned long Counter = 0;
-} CounterControl;
+
 
 CounterControl Counter1;
 CounterControl Counter2;
@@ -740,7 +760,7 @@ int toInt( String s, int pos  )
   return valString.toInt();
 }
 
-boolean isNumeric(String str) 
+bool isNumeric(String str) 
 {
     for(char i = 0; i < str.length(); i++) 
     {
