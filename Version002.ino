@@ -187,7 +187,7 @@ bool pinChanged = false;
 void setup() 
 {
   Serial.begin(BAUD_RATE);
-  Serial.println( "STRT" );
+  Serial.println( "STRT");
 
   SetupRead();
   pinMode(LED_PIN, OUTPUT);
