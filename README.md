@@ -9,7 +9,7 @@ do the development remotly. This means everything has to work from the commandli
 ## The Problem
 The part of manual of the Andino X1 that covers the Arduino programming is quite weak. It suggests using ino (https://pypi.org/project/ino/) and avr dude to upload the already compiled code
 
-![Image of Manual screenshot](https://github.com/ewenzlaff/AndinoX1_firmware_loader/Andino_Manual_Screenshot.png)
+![Image of Manual screenshot](https://github.com/ewenzlaff/AndinoX1_firmware_loader/blob/master/Andino_Manual_Screenshot.png)
 ## Prerequisites
 - Arduino-Makefile (https://github.com/sudar/Arduino-Makefile)
 - Arduino IDE (tested with 1.8.12)
