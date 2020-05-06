@@ -7,8 +7,8 @@ ARDUINO_SKETCHBOOK = ./
 #AVRDUDE_ISP_BAUDRATE = 38400
 
 MONITOR_BAUDRATE = 38400
-AVRDUDE_ARD_BAUDRATE = 57600
+AVRDUDE_ARD_BAUDRATE = 57600 # default value
 AVRDUDE_ARD_PROGRAMMER = arduino
-#RESET_CMD = ~/Arduino-Makefile/bin/ard-reset-arduino $(ARDUINO_PORT)  --verbose --period 1
+#RESET_CMD = ~/Arduino-Makefile/bin/ard-reset-arduino $(ARDUINO_PORT)  --verbose --period 1 # test for cable mode
 RESET_CMD = ./reset.py
 include $(ARDMK_DIR)/Arduino.mk
