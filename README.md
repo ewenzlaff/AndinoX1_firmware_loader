@@ -1,4 +1,4 @@
-# Andino firmware loader
+# Andino X1 firmware loader
 The given repository is a workflow for building and uploading the original firmware of the Andino X1 (https://andino.shop) from the Raspberry Pi section directly to the Arduino part without using the external USB Port.
 
 
