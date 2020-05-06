@@ -8,7 +8,7 @@ do the development remotly. This means everything has to work from the commandli
 
 ## The Problem
 To compile and upload the firmware in the shell some adaptions had to made. 
-The part of manual of the Andino X1 that covers the Arduino programming is quite weak. It suggests using ino (https://pypi.org/project/ino/) and avr dude to upload the already compiled code.
+The part of manual of the Andino X1 that covers the Arduino programming is quite weak. It suggests using ino (https://pypi.org/project/ino/) (http://inotool.org/quickstart) and avr dude to upload the already compiled code.
 
 ![Image of Manual screenshot](https://github.com/ewenzlaff/AndinoX1_firmware_loader/blob/master/Andino_Manual_Screenshot.png)
 ### Compiling the Source Code
