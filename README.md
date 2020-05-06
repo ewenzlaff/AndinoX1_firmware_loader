@@ -35,5 +35,9 @@ Fortunately the reset could be done via GPIO 18 and the Arduino-Makefile provide
 - Arduino IDE (tested with 1.8.12)
 
 ## Usage
-TBD
+All variables in the Makefile are suited to the needs of the Andino basic firmware with added prototypes. My architecture is the atmega 328. Maybe you have to choose the 168. Ensure that the Arduino-Makefile has been installed properly and all variables are set.
+
+The ```reset.py``` will do the reset for you.
+
+Normaly it should work by hitting ``` make ``` and ``` make upload```
 
